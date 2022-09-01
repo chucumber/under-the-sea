@@ -1,0 +1,19 @@
+body {
+    background: lightcoral url("img/fish.jpg") no-repeat top right fixed;
+    background-size: 800px;
+    font-family: monospace;
+}
+
+p {
+    color: darkred;
+    background-color: lightgrey;
+}
+
+.spec {
+    color: peachpuff;
+    background: black;
+    font-size: 150%;
+    font-family: cursive; 
+    margin: 30px;
+    padding: 50px;
+}
