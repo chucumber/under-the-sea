@@ -19,6 +19,7 @@ body {
     background:limegreen;
     bottom: 100px;
     left: 100px;
+    z-index: 5;
 }
 
 .fixed {
@@ -26,6 +27,7 @@ body {
     background:mediumturquoise;
     bottom:20px;
     right:20px;
+    z-index: 4;
 }
 
 .absolute {
