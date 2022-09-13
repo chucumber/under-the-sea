@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'josefin_sansthin';
+    src: url('josefinsans-variablefont_wght-webfont.woff2') format('woff2'),
+         url('josefinsans-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin:0;
+    background-color:goldenrod;
+}
+
+.content {
+    background-color:darkslategrey;
+    color:cornsilk;
+    width:200px;
+    height:200px;
+    padding:30px;
+    border:10px solid chocolate;
+    margin: 50px auto;
+    font-family: 'josefin_sansthin', sans-serif;
+    font-size:90px; 
+}
+
+.border {
+    background-color:darkslategrey;
+    color:cornsilk;
+    width:200px;
+    height:200px;
+    padding:30px;
+    border:10px solid chocolate;
+    margin:50px;
+    box-sizing:border-box;
+}
