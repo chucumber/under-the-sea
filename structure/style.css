@@ -46,13 +46,13 @@ body {
     width: 7000px;
     /* align-items:inherit; */
     justify-content: flex-start;
-    position: relative;
+    /* position: relative; */
 }
 
 .doc {
-    position: fixed;
+    position: absolute;
     margin-left:20px;
-    bottom:48vh;
+    margin-top:35px;
 }
 
 .memory {
