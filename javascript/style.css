@@ -1,0 +1,65 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:10px;
+    background-color:azure;
+
+}
+
+.dark {
+    background-color:darkblue;
+    transition: background-color .5s;   
+}
+
+.box {
+    padding: 20px;
+    background-color: slategray;
+    font-size: 20px;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top:0;
+    right:-300px;
+    /* hide the box */
+    border-left: 1px solid;
+    transition: right .5s;
+
+}
+
+.active {
+    right:0;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    background-color: olivedrab;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: darkseagreen;
+}
+
+button:active {
+    background-color: chartreuse;
+}
+
+.obj {
+    background-color: gold;
+    width:100px;
+    height:100px;
+    position: fixed;
+    bottom: 140px;
+    left: 140px;
+    transition: transform 1s, background-color 1s;
+}
+
+.spin {
+    transform: rotate(360deg);
+    background-color: sienna;
+}
+

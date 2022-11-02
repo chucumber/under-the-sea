@@ -1,0 +1,77 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:10px;
+    background-color:lightblue;
+    transition: background-color 2s;
+
+}
+
+body.dark {
+    background-color: lightslategray;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.box {
+   height: 200px;
+   width: 200px;
+   background-color:beige;
+   border: 1px solid;
+   animation: spin 10s infinite linear;animation-play-state: paused;
+   transition: background-color 2s, box-shadow 1s;
+
+}
+
+.box.dark {
+    background-color:darkblue;
+}
+
+.box.glow {
+    background-color: khaki;
+    box-shadow: 0 0 20px 10px khaki;
+}
+
+.box.spin {
+    animation-play-state: running;
+}
+
+.fish {
+    width: 80px;
+    position: fixed;
+    left: 100px;
+    bottom: 200px;
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    background-color: olivedrab;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: chartreuse;
+}
+
+button:active {
+    background-color: darkseagreen;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
