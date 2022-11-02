@@ -19,14 +19,15 @@ body {
     top: 20px;
     right: 20px;
     border-radius: 15%;
-    z-index: 5;
+    z-index: 2;
 }
 
 .pegman {
     height: 30px;
-    position: relative;
-    top: 25%;
-    left:35%;
+    position: fixed;
+    top: 35px;
+    right:45px;
+    z-index: 3;
 }
 
 .memory {
