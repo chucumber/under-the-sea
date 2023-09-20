@@ -221,8 +221,8 @@ body {
 small {
     color: darkseagreen;
     position: fixed;
-    bottom:3%;
-    right: 0%;
-    font-size: xx-small;
+    bottom:1%;
+    right: 1%;
+    font-size: x-small;
 }
 
