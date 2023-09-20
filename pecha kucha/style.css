@@ -1,0 +1,214 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background:rgb(255, 255, 255);
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    transition: background 4s;
+}
+
+.click:hover {
+    cursor: pointer;
+}
+
+.section_a {
+    position: fixed;
+    left: 50%;
+    top: 65%;
+}
+
+.first, .sea, #step_two, .third, #step_four_0, #step_four_1, #nessie, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth, #step_eleven_0, #step_eleven_1, #container, .twelveth, .thirteenth, .forteenth, #step_fifteen_0, #step_fifteen_1, .sixteenth, .deep_sea, .seventeenth, .eighteenth, .ninteenth, .twentieth, .twenty_one {
+    display:none;
+}
+
+#kai {
+    width: 60px;
+    position: fixed;
+    left: 70%;
+    bottom: 32%;
+}
+
+.second {
+    display: flexbox;
+}
+
+.sea {
+    height: 100vh;
+    width: 100vw;
+    background: url(img/wave_.gif); 
+    background-size: 570px 350px;
+    background-repeat: repeat;
+    /* display:none; */
+    position: relative;
+    z-index: -10;
+}
+
+#taiwan {
+    width: 80px;
+    position: fixed;
+    left: 25%;
+    bottom: 45%;
+}
+
+#nessie {
+    width: 1200px;
+    position: fixed;
+    left: -10%;
+    top: 0;
+    opacity: 0.2;
+    mix-blend-mode: darken;
+}
+
+#coastline, #coastline_a {
+    width: 300px;
+    position: fixed;
+    left: 70%;
+    top: 25%;
+}
+
+.section_b {
+    position: fixed;
+    left: 20%;
+    top: 35%;
+}
+
+#kai_a {
+    width: 60px;
+    position: fixed;
+    left: 17%;
+    top: 25%;
+    rotate: 180deg;
+}
+
+#cichlid, #cichlid_a {
+    width: 500px;
+    position: fixed;
+    left: 30%;
+    top: 6%;
+    rotate: 0deg;
+    transition: transform 3s;
+}
+
+#cichlid_a.dying {
+    transform: translate(30%, 60%) scale(0.2) rotate(100deg);
+}
+
+#cichlid_b {
+    width: 100px;
+    position: fixed;
+    left: 70%;
+    bottom: 20%;
+    rotate: 90deg;
+}
+
+#container{
+    width:100%;
+    overflow:hidden; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
+}
+
+.section_c {
+    position: fixed;
+    left: 60%;
+    top: 10%;
+    color: black;
+    transition: color 3s;
+}
+
+.kai_wander {
+    width: 100px;
+    animation: x 20s linear infinite alternate;
+    z-index: 1;
+}
+  
+    @keyframes x {
+    100% {
+      transform: translateX(calc(100vw - 100px));
+    }
+    }
+
+    @keyframes y {
+    100% {
+      transform: translateY(calc(100vh - 100px));
+    }
+    }
+
+.kai_travel {
+    width: 100px;
+    height: 100px;
+    animation: y 5s linear infinite reverse;
+}
+
+#kirby {
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.deep_sea {
+    height: 100vh;
+    width: 100vw;
+    background: url(img/bubble.gif); 
+    background-size: 750px 420px;
+    background-repeat: repeat;
+    /* display:none; */
+    position: relative;
+    z-index: -10;
+}
+
+.section_d {
+    color: rgb(208, 208, 208);
+    position: fixed;
+    left: 60%;
+    top: 18%;
+}
+
+.section_e {
+    position: fixed;
+    left: 20%;
+    top: 55%;
+}
+
+#take_a_walk {
+    position: fixed;
+    right: 0%;
+    top: 0%;
+}
+
+#passing_by {
+    position: fixed;
+    left: 20%;
+    top: 30%;
+}
+
+#breeze {
+    position: fixed;
+    left: 0%;
+    top: 13%;
+}
+
+#days {
+    position: fixed;
+    right: 10%;
+    bottom: 30%;
+}
+
+#kai_b {
+    width: 60px;
+    position: fixed;
+    left: 45%;
+    bottom: 10%;
+    rotate: 125deg;
+}
+
