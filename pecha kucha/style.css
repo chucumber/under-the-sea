@@ -9,7 +9,13 @@ body {
     overflow: hidden;
     background:rgb(255, 255, 255);
     font-family:'Trebuchet MS', Arial, sans-serif;
+    font-size:xx-large;
     transition: background 4s;
+}
+
+#sound {
+    opacity: 0;
+    position: fixed;
 }
 
 .click:hover {
@@ -19,7 +25,7 @@ body {
 .section_a {
     position: fixed;
     left: 50%;
-    top: 65%;
+    top: 55%;
 }
 
 .first, .sea, #step_two, .third, #step_four_0, #step_four_1, #nessie, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth, #step_eleven_0, #step_eleven_1, #container, .twelveth, .thirteenth, .forteenth, #step_fifteen_0, #step_fifteen_1, .sixteenth, .deep_sea, .seventeenth, .eighteenth, .ninteenth, .twentieth, .twenty_one {
@@ -27,10 +33,10 @@ body {
 }
 
 #kai {
-    width: 60px;
+    width: 100px;
     position: fixed;
-    left: 70%;
-    bottom: 32%;
+    left: 80%;
+    bottom: 38%;
 }
 
 .second {
@@ -49,17 +55,17 @@ body {
 }
 
 #taiwan {
-    width: 80px;
+    width: 140px;
     position: fixed;
-    left: 25%;
+    left: 15%;
     bottom: 45%;
 }
 
 #nessie {
     width: 1200px;
     position: fixed;
-    left: -10%;
-    top: 0;
+    left: -15%;
+    top: -3%;
     opacity: 0.2;
     mix-blend-mode: darken;
 }
@@ -73,29 +79,29 @@ body {
 
 .section_b {
     position: fixed;
-    left: 20%;
+    left: 10%;
     top: 35%;
 }
 
 #kai_a {
-    width: 60px;
+    width: 100px;
     position: fixed;
-    left: 17%;
-    top: 25%;
+    left: 10%;
+    top: 20%;
     rotate: 180deg;
 }
 
 #cichlid, #cichlid_a {
-    width: 500px;
+    width: 600px;
     position: fixed;
-    left: 30%;
-    top: 6%;
+    left: 10%;
+    top: -5%;
     rotate: 0deg;
     transition: transform 3s;
 }
 
 #cichlid_a.dying {
-    transform: translate(30%, 60%) scale(0.2) rotate(100deg);
+    transform: translate(40%, 90%) scale(0.3) rotate(100deg);
 }
 
 #cichlid_b {
@@ -118,33 +124,33 @@ body {
 
 .section_c {
     position: fixed;
-    left: 60%;
+    left: 50%;
     top: 10%;
     color: black;
     transition: color 3s;
 }
 
 .kai_wander {
-    width: 100px;
+    width: 130px;
     animation: x 20s linear infinite alternate;
     z-index: 1;
 }
   
     @keyframes x {
     100% {
-      transform: translateX(calc(100vw - 100px));
+      transform: translateX(calc(100vw - 130px));
     }
     }
 
     @keyframes y {
     100% {
-      transform: translateY(calc(100vh - 100px));
+      transform: translateY(calc(100vh - 130px));
     }
     }
 
 .kai_travel {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     animation: y 5s linear infinite reverse;
 }
 
@@ -188,14 +194,14 @@ body {
 
 #passing_by {
     position: fixed;
-    left: 20%;
-    top: 30%;
+    left: 10%;
+    top: 35%;
 }
 
 #breeze {
     position: fixed;
     left: 0%;
-    top: 13%;
+    top: 5%;
 }
 
 #days {
@@ -205,10 +211,18 @@ body {
 }
 
 #kai_b {
-    width: 60px;
+    width: 100px;
     position: fixed;
-    left: 45%;
+    left: 65%;
     bottom: 10%;
     rotate: 125deg;
+}
+
+small {
+    color: darkseagreen;
+    position: fixed;
+    bottom:3%;
+    right: 0%;
+    font-size: xx-small;
 }
 

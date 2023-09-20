@@ -16,8 +16,8 @@ $("#step_two").click(function(){
 
 $("#taiwan").click(function(){
     $("#step_four_0").fadeIn("slow");
-    $("#step_four_1").delay(1500).fadeIn("slow");
-    $("#nessie").delay(1000).fadeIn(7000);
+    $("#step_four_1").delay(2500).fadeIn("4000");
+    $("#nessie").delay(2000).fadeIn(7000);
     $(".third").fadeOut("slow");
 });
 
@@ -56,8 +56,8 @@ $("#cichlid_a").click(function(){
 
 $("#step_ten").click(function(){
     $("#step_eleven_0").fadeIn("slow");
-    $("#step_eleven_1").delay(3000).fadeIn("slow");
-    $("#container").fadeIn(5000);
+    $("#step_eleven_1").delay(5000).fadeIn("slow");
+    $("#container").fadeIn(7000);
     $(".tenth").fadeOut("slow");
 });
 
@@ -78,9 +78,9 @@ $("#et").click(function(){
 });
 
 $("#kirby").click(function(){
-    $(".deep_sea").fadeIn(5000);
+    $(".deep_sea").fadeIn(3000);
     $("#step_fifteen_0").fadeIn("slow");
-    $("#step_fifteen_1").delay(1500).fadeIn("slow");
+    $("#step_fifteen_1").delay(5000).fadeIn("3000");
     $(".forteenth").fadeOut("slow");
 });
 
@@ -97,7 +97,7 @@ $("#step_sixteen").click(function(){
 $("#step_seventeen").click(function(){
     $(".eighteenth").fadeIn("slow");
     $(".seventeenth").fadeOut("slow");
-    $(".deep_sea").fadeOut(5000);
+    $(".deep_sea").fadeOut(3000);
 });
 
 $("#step_eighteen").click(function(){
