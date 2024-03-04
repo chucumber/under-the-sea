@@ -1,6 +1,7 @@
 function pickup() {
     alert("They picked up the drive.");
     document.getElementById("ground").style.opacity = "0";
+    document.getElementById("ground").style.cursor = "progress";
     document.getElementById("text").style.display = "block";
     document.getElementById("drive-icon").style.filter = "invert(100%)"
 }

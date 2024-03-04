@@ -4,13 +4,14 @@
 
 body {
     margin:0;
+    height: 100vh;
+    width: 100vw;
     background-image: url(img/asphalt_alt.png);
     background-size: 3000%;
     background-position: center;
     /* background-color: rgb(216, 208, 195); */
-    cursor: crosshair;
     overflow: hidden;
-
+    cursor: progress;
 }
 
 
@@ -29,7 +30,7 @@ body {
     position: absolute;
     top: 60vh;
     left: 65vw;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     width: 120px;
     text-align: center;
   }
