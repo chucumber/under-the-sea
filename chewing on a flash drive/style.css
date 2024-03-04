@@ -38,7 +38,6 @@ body {
 #drive-icon {
     text-align: center;
     display: block;
-    transition: 1s;
     filter: none;
     width: 120px;
     margin-bottom: 8px;
@@ -54,7 +53,7 @@ body {
     font-family: "MS Sans Serif", Arial, sans-serif;
     font-size: 14px;
     padding: 1px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 button {
@@ -65,7 +64,6 @@ button {
     display: inline-block;
     font-size: 16px;
     margin: 2px 2px;
-    /* transition: 1s; */
 }
 
 button:hover {
@@ -114,18 +112,16 @@ section#content {
   }
 
   .page {
-    position: absolute;
-    margin-top: 150px;
-  }
-
-  .thirteen {
-    filter: blur(1.5px);
+    position: fixed;
+    top: 67vh;
   }
 
   section#content .black-hole {
     position: fixed;
-    top: 80vh;
+    top: 100vh;
     left: 15vw;
+    transform: translate(0%,-50%);
+
   }
 
   section#content .paragraph {
