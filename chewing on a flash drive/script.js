@@ -2,13 +2,12 @@ function pickup() {
     alert("They picked up the drive.");
     document.getElementById("ground").style.opacity = "0";
     document.getElementById("text").style.display = "block";
-    document.getElementById("drive-icon").style.transform = "rotate(-110deg)";
+    document.getElementById("drive-icon").style.filter = "invert(100%)"
 }
 
 
-
 window.addEventListener('load',load);
-window.addEventListener('wheel',throttle(scroll,3000));
+window.addEventListener('wheel',throttle(scroll,2000));
 
 
 var index=0; //new project count
@@ -16,11 +15,11 @@ var pIndex; //previous project count
 
 function load() {
   var des=document.getElementsByClassName("words");
-  var scr=document.getElementsByClassName("scroll-down");
+  var page=document.getElementsByClassName("page");
   pIndex=des.length-1;
   for(var i=0;i<des.length;i++){
     des[i].innerHTML=addSpan(des[i].innerHTML);
-    scr[i].innerHTML=addSpan(scr[i].innerHTML);
+    page[i].innerHTML=addSpan(page[i].innerHTML);
   }
 }
 
@@ -33,14 +32,14 @@ function addSpan(str){
   return newStr;
 }
 
-var projects=document.getElementsByClassName("paragraph");
-function updateProject(){
-  projects[index].classList.add("active");
-  projects[pIndex].classList.remove("active");
-  projects[pIndex].classList.add("disappear");
+var paragraphs=document.getElementsByClassName("paragraph");
+function updateParagraphs(){
+  paragraphs[index].classList.add("active");
+  paragraphs[pIndex].classList.remove("active");
+  paragraphs[pIndex].classList.add("disappear");
   setTimeout(function(){
-    projects[pIndex].classList.remove("disappear");
-  },1400);
+    paragraphs[pIndex].classList.remove("disappear");
+  },1100);
   
 }
 
@@ -56,7 +55,7 @@ function throttle(fn, wait) {
 
 function scroll(){
   pIndex=index;
-  if(index<projects.length-1) index++;
+  if(index<paragraphs.length-1) index++;
   else index=0;
-  updateProject();
+  updateParagraphs();
 }
