@@ -141,17 +141,17 @@ section#content {
     color: rgb(75, 75, 75);
   }
   section#content .paragraph span:nth-child(3n+2) {
-    transition: 1165ms ease-in-out 673ms;
+    transition: 1065ms ease-in 1273ms;
   }
   section#content .paragraph span:nth-child(5n+7) {
     transition: 525ms ease-in-out 962ms;
     filter: blur(0.7px);
   }
   section#content .paragraph span:nth-child(7n+5) {
-    transition: 1369ms ease-in-out 595ms;
+    transition: 2369ms ease-in-out 595ms;
   }
   section#content .paragraph span:nth-child(11n+3) {
-    transition: 1440ms ease-in-out 627ms;
+    transition: 840ms ease-in-out 1927ms;
   }
   section#content .paragraph span:nth-child(13n+5) {
     transition: 713ms ease-in-out 779ms;
