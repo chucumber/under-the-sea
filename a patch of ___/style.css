@@ -1,0 +1,33 @@
+* {
+    box-sizing:border-box;
+    cursor: none;
+}
+
+body {
+    background: url(img/bg.svg) center center fixed;
+    background-size: 100%;
+    margin: 120px;
+}
+
+.leaf, .key, .usb, .coin, .lid {
+    display: none;
+}
+
+#leaf, #key, #usb, #coin, #lid {
+    font-family:'Courier New', Courier, monospace;
+    font-size:30px;
+    color: beige;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 10px;
+    color: greenyellow;
+}
+
+
