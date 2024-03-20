@@ -1,0 +1,206 @@
+* { cursor: none;}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/IMG_8728_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: hidden;
+
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #000000;
+}
+  
+.kite {
+    background-image: url(./img/kite_s.gif);
+    background-repeat: no-repeat;
+    filter: blur(4px);
+    mix-blend-mode: multiply;
+    transition: transform 2s;
+    width: 120px;
+    height: 60px;
+}
+
+.location {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+}
+
+
+.dialogue {
+    position: fixed;
+    display: none;
+    top: 7vh;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+    color: rgb(255, 238, 0);
+}
+
+#left {
+    top: 50vh;
+    left: 0vw;
+    height: 500px;
+    width: 50px;
+}
+
+#left:hover + .dialogue{
+    display: block;
+}
+
+#leaves {
+    top: 3vh;
+    left: 3vw;
+    height: 250px;
+    width: 300px;
+}
+
+#leaves:hover + .dialogue{
+    display: block;
+}
+
+#heart {
+    top: 22vh;
+    left: 59vw;
+    height: 200px;
+    width: 200px;
+}
+
+#heart:hover + .dialogue{
+    display: block;
+}
+
+#yellow_leave {
+    top: 36vh;
+    left: 2vw;
+    height: 120px;
+    width: 400px;
+}
+
+#yellow_leave:hover + .dialogue{
+    display: block;
+}
+
+#green_leave {
+    top: 16vh;
+    left: 36vw;
+    height: 150px;
+    width: 200px;
+}
+
+#green_leave:hover + .dialogue{
+    display: block;
+}
+
+#black {
+    top: 40vh;
+    left: 44vw;
+    height: 80px;
+    width: 190px;
+    transform: rotate(-30deg);
+}
+
+#black:hover + .dialogue{
+    display: block;
+}
+
+#white_dot {
+    top: 68vh;
+    left: 64vw;
+    height: 170px;
+    width: 200px;
+    transform: rotate(-30deg);
+}
+
+#white_dot:hover + .dialogue{
+    display: block;
+}
+
+#above {
+    top: 0vh;
+    left: 34vw;
+    height: 40px;
+    width: 800px;
+}
+
+#above:hover + .dialogue{
+    display: block;
+}
+
+#bottom {
+    top: 100vh;
+    left: 0vw;
+    height: 40px;
+    width: 100%;
+    transform: translate(0, -100%);
+}
+
+#bottom:hover + .dialogue{
+    display: block;
+}
+
+#plain {
+    top: 40vh;
+    left: 80vw;
+    height: 400px;
+    width: 400px;
+}
+
+#plain:hover + .dialogue{
+    display: block;
+}
+
+#piece {
+    top: 72vh;
+    left: 19vw;
+    height: 80px;
+    width: 150px;
+    transform: rotate(-10deg);
+}
+
+#piece:hover + .dialogue{
+    display: block;
+}
+
+#dust {
+    top: 81vh;
+    left: 43vw;
+    height: 100px;
+    width: 100px;
+}
+
+#dust:hover + .dialogue{
+    display: block;
+}
+
+#rock {
+    top: 72vh;
+    left: 53vw;
+    height: 80px;
+    width: 110px;
+    transform: rotate(-40deg);
+}
+
+#rock:hover + .dialogue{
+    display: block;
+}
+
+#rock_group {
+    top: 15vh;
+    left: 87vw;
+    height: 160px;
+    width: 160px;
+    /* transform: rotate(-40deg); */
+}
+
+#rock_group:hover + .dialogue{
+    display: block;
+}
+
