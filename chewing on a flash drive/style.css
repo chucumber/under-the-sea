@@ -10,6 +10,7 @@ body {
     background-size: 3000%;
     background-position: center;
     overflow: hidden;
+    cursor: wait;
 }
 
 
