@@ -11,6 +11,8 @@ body {
     background-position: center;
     overflow: hidden;
     cursor: wait;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
 }
 
 
@@ -44,13 +46,13 @@ body {
   
 .icon-label {
     background-color: rgba(185, 185, 185, 0.6);
-    border-radius: 2px;
+    border-radius: 3.5px;
     width: 100px;
     text-align: center;
     color: black;
     font-family: "MS Sans Serif", Arial, sans-serif;
     font-size: 0.9em;
-    padding: 1px;
+    padding: 1.1px;
     margin-left: 15px;
 }
 
@@ -97,11 +99,11 @@ section#content {
     font-size: 1em;
     line-height: 2;
     max-width: 45vw;
-    /* filter: blur(0.1px); */
   }
 
   section#content small {
     font-size: 12px;
+    letter-spacing: 2px;
     max-width: 45vw;
     color: rgb(135, 135, 135);
     filter: blur(1px);

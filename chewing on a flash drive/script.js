@@ -3,7 +3,8 @@ function pickup() {
     document.getElementById("ground").style.opacity = "0";
     document.getElementById("ground").style.cursor = "wait";
     document.getElementById("text").style.display = "block";
-    document.getElementById("drive-icon").style.filter = "invert(100%)"
+    document.getElementById("drive-icon").style.filter = "invert(100%)";
+    document.getElementById("icon-label").style.backgroundColor = "rgba(170, 220, 245, 0.7)";
 }
 
 
