@@ -1,0 +1,242 @@
+* {
+  cursor: url(../img/none.png), auto;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
+    display: flex;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(85, 85, 85);
+}
+
+.kite {
+    background-image: url(../img/kite_2.svg);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    opacity: 1;
+    /* mix-blend-mode:exclusion; */
+}
+
+.kitetail_letter {
+    color: #f0730d;
+    font: normal 13px Arial, Helvetica;
+    position: absolute;
+    top: -50px;
+    position: absolute;
+    /* mix-blend-mode:color-burn; */
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(4px);
+    }
+
+    60% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button {
+    cursor: url(./img/none.png), auto;
+    position: absolute;
+    padding: 5px 50px;
+    text-align: center;
+    font-size: 1em;    
+    display: inline-block;
+    height: 60px;
+    color: #f0f0f0;    
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
+    border: none;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    transition: opacity 2s, transform 3s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.scrollbar {
+  position: absolute;
+  top:10vh;
+  right:30vw;
+  height: 60vh;
+  width: 15vw;  
+  background: #ffffff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 25px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(230, 255, 255) 0%, rgb(123, 132, 150) 100%);
+  border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: rgb(230, 255, 255);
+}
+
+.overflow {
+  min-height: 600vh;
+}
+
+.overflow p {
+  position: relative;
+  font-size: 1em;
+  line-height: 38em;
+}
+
+#just {
+  position: absolute;
+  top:20vh;
+  left: 5em;
+}
+
+
+#when {
+  position: absolute;
+  left: 10em;
+  top: 73vh;
+}
+
+#will {
+  position: absolute;
+  left: 8em;
+  top: 130vh;
+}
+
+#this {
+  position: absolute;
+  left: 14em;
+  top: 220vh;
+}
+
+#rain {
+  position: absolute;
+  left: 7em;
+  top: 340vh;
+}
+
+#reach {
+  position: absolute;
+  left: 12em;
+  top: 400vh;
+}
+
+#an {
+  position: absolute;
+  left: 8em;
+  top: 490vh;
+}
+
+#end {
+  position: absolute;
+  left: 9em;
+  top: 560vh;
+}
+
+.drops {
+  position: absolute;
+  width: 26.5px;
+  opacity: 0.9;
+}
+
+#drop1 {
+  top: 10vh;
+  left:27vw;
+}
+
+#drop2 {
+  top: 0vh;
+  left:35vw;
+}
+
+#drop3 {
+  top: 6vh;
+  left:43vw;
+}
+
+#drop4 {
+  top: 13vh;
+  left:47vw;
+}
+
+#drop5 {
+  top: 0vh;
+  left:54vw;
+}
+
+#drop6 {
+  top: 8vh;
+  left:72vw;
+}
+
+#drop7 {
+  top: 19vh;
+  left:52vw;
+}
+
+#drop8 {
+  top: 19vh;
+  left:39vw;
+}
+
+#drop9 {
+  top: 19vh;
+  left:23vw;
+}
+
+#drop10 {
+  top: 19vh;
+  left:45vw;
+}
+
+#flyback {
+  background: url(../img/blowaway.png) no-repeat;
+  position: absolute;
+  top: 596vh;
+  left: 5em;
+  width: 60px;
+  height: 35px;
+  cursor: url(../img/none.png), auto;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+#flyback:hover {
+  background: url(../img/exit.png) no-repeat;
+  opacity: 0.6;
+  cursor: url(../img/none.png), auto;
+} 
+
+::selection {
+	background-color:transparent;
+	color:#2ee753;
+}
+::-moz-selection {
+	background-color:transparent;
+	color:#2ee753;
+}

@@ -1,0 +1,159 @@
+body {
+    cursor: url(../img/none.png), auto;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #505050;
+    display: flex;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color:rgb(85, 85, 85); */
+}
+
+.kite {
+    background-image: url(../img/kite_2.svg);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    opacity: 1;
+    /* mix-blend-mode:exclusion; */
+}
+
+.kitetail_letter {
+    color: #f0730d;
+    font: normal 13px Arial, Helvetica;
+    position: absolute;
+    top: -50px;
+    position: absolute;
+    /* mix-blend-mode:color-burn; */
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(4px);
+    }
+
+    60% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button {
+    cursor: url(./img/none.png), auto;
+    position: absolute;
+    padding: 5px 50px;
+    text-align: center;
+    font-size: 1em;    
+    display: inline-block;
+    height: 60px;
+    color: #f0f0f0;    
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
+    border: none;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    transition: opacity 2s, transform 3s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.noConnect {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    color: #000000;
+    animation: blink linear infinite 2s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+  }
+  79%{
+    color: #424242;
+  }
+  81% {
+    color: inherit;
+  }
+  82% {
+    color: #424242;
+  }
+  83% {
+    color: inherit;
+  }
+  92% {
+    color: #424242;
+  }
+  92.5% {
+    color: inherit;
+  }
+}
+
+.offline-party {
+    position: absolute;
+    bottom:2vh;
+    left:10vw;
+    color: #505050;
+}
+
+.offline-party p {
+    padding-bottom:15px;
+}
+
+#face {
+    padding-bottom: 20px;
+}
+
+#flashlight {
+    height: 20vmax;
+/*   height: 260px; */
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  /*   transition: left 0.5s ease-out, top 0.5s ease-out; */
+  translate: -70% -50%;
+  border-radius: 50%;
+  background: #dddddd;
+  transform: translate3d(0, 0, 0); /* for better performance */
+  filter: blur(75px);
+  z-index: -10;
+}
+
+#flyback {
+  background: url(../img/blowaway.png) no-repeat;
+  position: absolute;
+  bottom: 25vh;
+  left: 2vw;
+  width: 60px;
+  height: 35px;
+  cursor: url(../img/none.png), auto;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+#flyback:hover {
+  background: url(../img/exit.png) no-repeat;
+  opacity: 0.6;
+  cursor: url(../img/none.png), auto;
+} 
+
+::selection {
+	background-color:transparent;
+	color:#2ee753;
+}
+::-moz-selection {
+	background-color:transparent;
+	color:#2ee753;
+}

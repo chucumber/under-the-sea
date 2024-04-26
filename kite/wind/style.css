@@ -1,0 +1,167 @@
+body {
+    cursor: url(../img/none.png), auto;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
+    display: flex;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(85, 85, 85);
+}
+
+.kite {
+    background-image: url(../img/kite_2.svg);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    opacity: 0;
+}
+
+.kitetail_letter {
+    color: #ee5700;
+    font: normal 13px Arial, Helvetica;
+    position: absolute;
+    top: -50px;
+    position: absolute;
+    animation: wave 2s ease-in-out infinite;
+    /* Adjust animation duration */
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(4px);
+    }
+
+    60% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button {
+    cursor: url(../img/none.png), auto;
+    position: absolute;
+    padding: 5px 50px;
+    text-align: center;
+    font-size: 1em;    
+    display: inline-block;
+    height: 27px;
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(152, 216, 255) 100%);
+    opacity: 0.5;
+    border: none;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: opacity 2s, transform 3s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.line {
+    position: absolute;
+    top:70vh;
+    left:50vw;
+    font-size: 1em;
+    display: flex;    
+    transform: translate(-50%,0);
+}
+
+.icon {
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+
+#loading {
+    width: 30px;
+    position: absolute;
+    top:25vh;
+    left:50vw;
+    transform: translate(-50%,-50);
+}
+
+#windmill {
+    width: 65px;
+    left: 40vw;
+    top: 48vh;
+}
+
+#windmill1 {
+    width: 65px;
+    left: 75vw;
+    top: 30vh;
+}
+
+#pinwheel {
+    width: 50px;
+    left: 55vw;
+    top: 40vh;
+}
+
+#pinwheel1 {
+    width: 50px;
+    left: 62vw;
+    top: 49vh;
+}
+
+#pinwheel2 {
+    width: 50px;
+    left: 67vw;
+    top: 28vh;
+}
+
+#pinwheel3 {
+    width: 50px;
+    left: 20vw;
+    top: 38vh;
+}
+
+#pinwheel4 {
+    width: 50px;
+    left: 31vw;
+    top: 20vh;
+}
+
+#pinwheel5 {
+    width: 50px;
+    left: 35vw;
+    top: 36vh;
+} 
+
+#flyback {
+    background: url(../img/blowaway.png) no-repeat;
+    position: absolute;
+    top: 66vh;
+    left: 54vw;
+    width: 60px;
+    height: 35px;
+    cursor: url(../img/none.png), auto;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
+}
+
+#flyback:hover {
+    background: url(../img/exit.png) no-repeat;
+    opacity: 0.6;
+    cursor: url(../img/none.png), auto;
+} 
+
+::selection {
+	background-color:transparent;
+	color:#2ee753;
+}
+::-moz-selection {
+	background-color:transparent;
+	color:#2ee753;
+}
