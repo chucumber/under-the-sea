@@ -112,36 +112,31 @@ function lightning() {
         { width: 330, height: 170 }, // 10
     ];
     const windowPositions = [
-        { posX: 100, posY: 100 }, // 1
-        { posX: 500, posY: 200 }, // 2
-        { posX: 440, posY: 700 }, // 3
-        { posX: 800, posY: 270 }, // 4
-        { posX: 500, posY: 850 }, // 5
-        { posX: 50, posY: 500 }, // 6
-        { posX: 1350, posY: 360 }, // 7
-        { posX: 1300, posY: 950 }, // 8
-        { posX: 900, posY: 600 }, // 9
-        { posX: 1000, posY: 150 } // 10
+        { posX: '5vw', posY: '3vh' }, // 1
+        { posX: '30vw', posY: '10vh' }, // 2
+        { posX: '20vw', posY: '50vh' }, // 3
+        { posX: '60vw', posY: '20vh' }, // 4
+        { posX: '28vw', posY: '78vh' }, // 5
+        { posX: '2vw', posY: '45vh' }, // 6
+        { posX: '75vw', posY: '30vh' }, // 7
+        { posX: '45vw', posY: '93vh' }, // 8
+        { posX: '67vw', posY: '60vh' }, // 9
+        { posX: '80vw', posY: '7vh' } // 10
     ];
 
-    // Loop through each window position and open a new window with the corresponding URL
     windowPositions.forEach((position, index) => {
         const { posX, posY } = position;
         const { width, height } = windowSizes[index]; // Get the size corresponding to the current window index
         const url = urls[index]; // Get the URL corresponding to the current window index
-        const features = `width=${width},height=${height},top=${posY},left=${posX}`;
+        
+        // Convert posX and posY from vw/vh to pixels
+        const posXPixel = (window.innerWidth * parseFloat(posX) / 100).toFixed(0);
+        const posYPixel = (window.innerHeight * parseFloat(posY) / 100).toFixed(0);
+
+        const features = `width=${width},height=${height},top=${posYPixel},left=${posXPixel}`;
         const newWindow = window.open(url, `Pop-up_${posX}_${posY}`, features);
-        openedWindows.push(newWindow); 
+        openedWindows.push(newWindow); // Store reference to the opened window
     });
-}
-
-function changeImage(isHovered) {
-    const image = document.getElementById("flyback");
-    
-    const hoverSrc = "../img/exit.png";
-    const nonHoverSrc = "../img/blowaway.png";
-
-    image.src = isHovered ? hoverSrc : nonHoverSrc;
 }
 
 function closeall(windowToKeepOpen) {

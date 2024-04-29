@@ -6,37 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="">
 
-<style>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(85, 85, 85);
+            font-weight: 700;
+            cursor: url(burned-kite.png), auto;
+        }
 
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(104, 99, 99);
-    background: url(lightning.gif) no-repeat center;
-    background-size: contain;
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(85, 85, 85);
-    font-weight: 700;
-    cursor: none;
-}
+        #lightning {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(104, 99, 99);
+            position: absolute;
+            animation: lightning 6s ease-in-out infinite;
+        }
 
-p {
-    padding: 2em;
-    color: blue;
-    font-size: 1.5em;
-    font-weight: 700;
-}
+        @keyframes lightning {
+            0% {
+                background-color: rgb(104, 99, 99);
+            }
 
-</style> 
+            6.25% {
+                background-color: rgb(104, 99, 99);
+            }
+
+            8% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            9% {
+                background-color: rgb(104, 99, 99);
+            }
+
+            11% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            30% {
+                background-color: rgb(104, 99, 99);
+            }
+
+            100% {
+                background-color: rgb(104, 99, 99);
+            }
+        }
+
+        p {
+            padding: 2em;
+            z-index: 1;
+            color: blue;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+    </style> 
 </head>
 
 <body>
+    <div id="lightning"></div>
     <p>Winner Winner Winner<br>100,000,000 visitor<br> you have won...</p>
 </body>
 

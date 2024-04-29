@@ -21,6 +21,9 @@ function setPosition(element, e) {
     prevAngle = angle; // Update previous rotation angle
 }
 
+setTimeout(() => {
+    follower.style.opacity = '1';
+}, 1000);
 
 
 let x, y = -20;

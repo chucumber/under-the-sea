@@ -15,8 +15,7 @@ body {
     background-repeat: no-repeat;
     width: 34px;
     height: 34px;
-    opacity: 1;
-    /* mix-blend-mode:exclusion; */
+    opacity: 0;
 }
 
 .kitetail_letter {

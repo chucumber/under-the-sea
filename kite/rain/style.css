@@ -19,7 +19,6 @@ body {
     width: 34px;
     height: 34px;
     opacity: 1;
-    /* mix-blend-mode:exclusion; */
 }
 
 .kitetail_letter {
@@ -28,7 +27,6 @@ body {
     position: absolute;
     top: -50px;
     position: absolute;
-    /* mix-blend-mode:color-burn; */
     animation: wave 2s ease-in-out infinite;
 }
 
@@ -91,12 +89,13 @@ body {
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, rgb(230, 255, 255) 0%, rgb(123, 132, 150) 100%);
+  background: linear-gradient(to bottom, #dbeaf3 0%, #2c61ff 100%);
+
   border-radius: 5px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background-color: rgb(230, 255, 255);
+  background-color: #f6f6f6;
 }
 
 .overflow {
@@ -112,55 +111,56 @@ body {
 #just {
   position: absolute;
   top:20vh;
-  left: 5em;
+  left: 1vw;
 }
 
 
 #when {
   position: absolute;
-  left: 10em;
+  left: 4vw;
   top: 73vh;
 }
 
 #will {
   position: absolute;
-  left: 8em;
+  left: 7vw;
   top: 130vh;
 }
 
 #this {
   position: absolute;
-  left: 14em;
+  left: 10vw;
   top: 220vh;
 }
 
 #rain {
   position: absolute;
-  left: 7em;
+  left: 5vw;
   top: 340vh;
 }
 
 #reach {
   position: absolute;
-  left: 12em;
+  left: 9vw;
   top: 400vh;
 }
 
 #an {
   position: absolute;
-  left: 8em;
+  left: 7vw;
   top: 490vh;
 }
 
 #end {
   position: absolute;
-  left: 9em;
+  left: 8vw;
   top: 560vh;
 }
 
 .drops {
   position: absolute;
-  width: 26.5px;
+  height: 60vh;
+  width: 13px;
   opacity: 0.9;
 }
 
@@ -185,8 +185,8 @@ body {
 }
 
 #drop5 {
-  top: 0vh;
-  left:54vw;
+  top: 15vh;
+  left:30vw;
 }
 
 #drop6 {

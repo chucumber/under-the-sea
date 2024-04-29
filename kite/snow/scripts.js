@@ -21,7 +21,9 @@ function setPosition(element, e) {
     prevAngle = angle; // Update previous rotation angle
 }
 
-
+setTimeout(() => {
+    follower.style.opacity = '1';
+}, 1000);
 
 let x, y = -20;
 const steps = [], delay = 100;
@@ -58,10 +60,6 @@ function kitetail() {
         }
     }
 }
-
-setTimeout(() => {
-    follower.style.opacity = '1';
-}, 1000);
 
 document.addEventListener("DOMContentLoaded", () => {
     message.forEach((word, i) => {
