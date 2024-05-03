@@ -1,5 +1,5 @@
 body {
-    cursor: url(./img/none.png), auto;
+    cursor: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -16,7 +16,6 @@ body {
     width: 34px;
     height: 34px;
     opacity: 0;
-    /* animation: waving 2s ease-in-out infinite; */
 }
 
 .kitetail_letter {
@@ -25,9 +24,7 @@ body {
     position: absolute;
     top: -50px;
     position: absolute;
-    /* mix-blend-mode:color-burn; */
     animation: wave 2s ease-in-out infinite;
-    /* Adjust animation duration */
 }
 
 @keyframes wave {

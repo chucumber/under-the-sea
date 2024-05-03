@@ -1,8 +1,5 @@
-* {
-  cursor: url(../img/none.png), auto;
-}
-
 body {
+    cursor: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -79,6 +76,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   margin: 25px;
+  scrollbar-color:#77b2ff #f6f6f6;
+  scrollbar-width: auto;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -90,7 +89,6 @@ body {
 
 .scrollbar::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #dbeaf3 0%, #2c61ff 100%);
-
   border-radius: 5px;
 }
 
@@ -113,7 +111,6 @@ body {
   top:20vh;
   left: 1vw;
 }
-
 
 #when {
   position: absolute;

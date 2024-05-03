@@ -1,5 +1,5 @@
 body {
-    cursor: url(../img/none.png), auto;
+    cursor: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -26,7 +26,6 @@ body {
     top: -50px;
     position: absolute;
     animation: wave 2s ease-in-out infinite;
-    /* Adjust animation duration */
 }
 
 @keyframes wave {
@@ -74,9 +73,7 @@ body {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    width: 500px;
-    /* display: flex; */
-
+    width: 550px;
 }
 
 .searchbar {
@@ -88,7 +85,6 @@ body {
     box-shadow: 0 0 5px 0 grey;
     display: flex;
     align-items: center;
-    /* cursor: url(../img/none.png), auto; */
     cursor: url(../img/none.png), auto;
 }
 

@@ -1,5 +1,5 @@
 body {
-    cursor: url(../img/none.png), auto;
+    cursor: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -139,12 +139,11 @@ body {
   height: 35px;
   cursor: url(../img/none.png), auto;
   transform: translate(-50%, -50%);
-  mix-blend-mode: multiply;
 }
 
 #flyback:hover {
   background: url(../img/exit.png) no-repeat;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   cursor: url(../img/none.png), auto;
 } 
 
