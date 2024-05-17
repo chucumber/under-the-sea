@@ -1,27 +1,23 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>may your flight be smooth, the wind calm, the cloud safe, and the sky blue!</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>may your flight be smooth, the wind calm, the cloud safe, and the sky blue!</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <link rel="stylesheet" href="style.css">
-
-
 </head>
 
-<body onLoad="kitetail();">
+<body>
+    <button class="button cloud" onclick="navigateTo('string.html');">string</button>
+    <button class="button cloud" onclick="navigateTo('search.html');">search</button>
+    <button class="button cloud" onclick="navigateTo('wind.html');">wind</button>
+    <button class="button cloud" onclick="navigateTo('storm.html');">storm</button>
+    <button class="button cloud" onclick="navigateTo('rain.html');">rain</button>
+    <button class="button cloud" onclick="navigateTo('lightning.html');">lightning</button>
+    <button class="button cloud" onclick="navigateTo('snow.html');">snow</button>
 
-    <button class="button" onclick="window.location.href = 'string.html';">a string is...</button>
-    <button class="button" onclick="window.location.href = 'search.html';">a search is...</button>
-    <button class="button" onclick="window.location.href = 'wind.html';">the wind is...</button>
-    <button class="button" onclick="window.location.href = 'storm.html';">a storm is...</button>
-    <button class="button" onclick="window.location.href = 'rain.html';">a rain is...</button>
-    <button class="button" onclick="window.location.href = 'lightning.html';">a lightning is...</button>
-    <button class="button" onclick="window.location.href = 'snow.html';">the snow is...</button>
-
-    <button class="button cloud" id=""></button>
-    <button class="button cloud" id=""></button>
     <button class="button cloud" id=""></button>
     <button class="button cloud" id=""></button>
     <button class="button cloud" id=""></button>
@@ -46,11 +42,47 @@
     <button class="button cloud_3" id=""></button>
 
     <div class="info">
-        <img src="./info/wind_vane_turn_md_clr.gif">
-        <button id="info_btn" onclick="window.location.href = 'info.html';">flyer guide</button>
+        <img src="./info/wind_vane_turn_md_clr.gif" alt="rooster weather vane">
+        <button id="info_btn" onclick="navigateTo('info.html');">flyer guide</button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <button class="button cloud" id="readme">READ.ME</button>
+
+    <div class="popup">
+        <div class="inner">
+            <div class="wrap">
+                <div class="content">
+                    Hi kite flyers,
+                    <br><br>
+                    Before you soar into the sky, please note:
+                    <br><br>
+                    &#9728;&#xFE0E; This website has been optimized for and tested on Firefox, Chrome, and Safari only.
+                    For the full experience, please use one of these browsers.
+                    <br><br>
+                    &#9728;&#xFE0E; Ensure that your browser is set to allow pop-ups, as there may be multiple pop-ups
+                    at times.
+                    <br><br>
+                    &#9728;&#xFE0E; Occasionally, an arrow-like Sprite (also known as a Pointer) may appear and attach
+                    itself to your kite. Don't worry, it won't harm your kite and usually disappears after a while.
+                    <br><br>
+                    May your flight be smooth, the wind calm, the cloud safe, and the sky blue!
+                </div>
+                <br>
+                <img id="flower" src="./img/flower_wind.gif" alt="flowers in the breeze">
+            </div>
+        </div>
+        <div class="bg-overlay"></div>
+    </div>
+
+
+    <div id="desktop-message">
+        <p>Please use a desktop or laptop to view this website for a better flying experience. <br><br>Good wind!</p>
+        <img src="./img/flyakite.png" alt="a human flying a kite">
+    </div>
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
     <script src="scripts.js"></script>
 
 </body>

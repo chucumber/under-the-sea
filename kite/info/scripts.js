@@ -1,19 +1,18 @@
 const root = document.querySelector('body');
 
-// Following extra cursor element
 const follower = document.createElement('div');
 follower.classList.add('kite');
 root.appendChild(follower);
 
-root.addEventListener('mousemove', e => {
-    setPosition(follower, e);
-});
-
 let prevX = 0; // Initialize previous X position
 let prevAngle = 20; // Initialize previous rotation angle
 
+document.addEventListener('mousemove', e => {
+    setPosition(follower, e);
+});
+
 function setPosition(element, e) {
-    const angle = (e.clientX > prevX) ? 20 : ((e.clientX < prevX) ? -20 : prevAngle); // Determine rotation angle based on mouse movement
+    const angle = (e.clientX > prevX) ? 20 : ((e.clientX < prevX) ? -20 : prevAngle);
 
     element.style.transform = `translate(${e.clientX}px, ${e.clientY}px) rotate(${angle}deg)`;
 
@@ -21,26 +20,20 @@ function setPosition(element, e) {
     prevAngle = angle; // Update previous rotation angle
 }
 
-setTimeout(() => {
-    follower.style.opacity = '1';
-}, 1000);
-
-
-let x, y = -20;
+let x = -20, y = -20;
 const steps = [], delay = 100;
 
-const
-    message = "a  cursor  is  a  kite  is  a  cursor".split(""),
-    xpos = [], ypos = [];
+const message = "a  cursor  is  a  kite  is  a  cursor".split("");
+const xpos = [], ypos = [];
 
-window.addEventListener("mousemove", e => {
-    x = pageXOffset + event.clientX + 18;
-    y = pageYOffset + event.clientY + 26;
+document.addEventListener("mousemove", e => {
+    x = e.pageX + 18; 
+    y = e.pageY + 26; 
 });
 
 function kitetail() {
-    const amplitude = 6; // Adjust this value to control the height of the wave
-    const frequency = 0.06; // Adjust this value to control the frequency of the wave
+    const amplitude = 6; // the height of the wave
+    const frequency = 0.06; // the frequency of the wave
 
     for (let i = message.length - 1; i > 0; i--) {
         xpos[i] = xpos[i - 1] + steps[i - 1];
@@ -57,10 +50,14 @@ function kitetail() {
         else {
             el.style.display = "block";
             el.style.left = xpos[i] + "px";
-            el.style.top = ypos[i] + waveOffset + "px"; // Adjust the ypos with waveOffset
+            el.style.top = ypos[i] + waveOffset + "px"; // the ypos with waveOffset
         }
     }
 }
+
+setTimeout(() => {
+    follower.style.opacity = '1';
+}, 1000);
 
 document.addEventListener("DOMContentLoaded", () => {
     message.forEach((word, i) => {
@@ -70,10 +67,28 @@ document.addEventListener("DOMContentLoaded", () => {
         el.innerText = word;
         document.body.appendChild(el);
         steps.push(el.getBoundingClientRect().width + 3);
-        el.style.animationDelay = `${i * 0.1}s`; // Adjust delay for each letter
+        el.style.animationDelay = `${i * 0.1}s`; // delay for each letter
     });
 
     setInterval(kitetail, delay);
+    
+});
+
+$(document).ready(function () {
+    $(document).on('contextmenu', function (e) {
+        // e.preventDefault();
+
+        var notification = $('<div>', {
+            class: 'notification',
+            text: 'An arrow-like Sprite presents itself and a list of services. Hum...these options seem unnecessary for your flight...'
+        });
+
+        $('body').append(notification);
+
+        notification.delay(9000).fadeOut(1000, function () {
+            $(this).remove(); // Remove the notification from the DOM
+        });
+    });
 });
 
 function BackToIndex() {

@@ -1,17 +1,15 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>SEVERE WEATHER</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/storm/73028-warning-icon.png">
-
+    <title>SEVERE WEATHER</title>
+    <link rel="icon" type="image/x-icon" href="./storm/warning.png">
     <link rel="stylesheet" href="./storm/style.css">
-
-
 </head>
 
-<body onLoad="kitetail();">
+<body>
 
     <div id="flashlight"></div>
 
@@ -28,9 +26,13 @@
 
     <div id="flyback" onclick="window.location.href = 'index.html';"></div>
 
+    <div id="desktop-message">
+        <p>Please use a desktop or laptop to view this website for a better flying experience. <br><br>Good wind!</p>
+        <img src="./img/flyakite.png" alt="a human flying a kite">
+    </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
     <script src="./storm/scripts.js"></script>
 
 </body>

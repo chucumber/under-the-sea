@@ -22,13 +22,13 @@ body {
     font-weight: 400;
 }
 
-.text {
+.hello {
     display: inline;
     float: left;
     margin: 0;
 }
 
-.list {
+.greeting {
     margin-top: 0;
     padding-left: 110px;
     text-align: left;
@@ -42,7 +42,7 @@ body {
     animation-direction: alternate;
 }
 
-.item {
+.to {
     line-height:40px;
     margin:0;
 }

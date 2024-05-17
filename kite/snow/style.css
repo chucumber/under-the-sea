@@ -1,87 +1,66 @@
 body {
-    cursor: none;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
-    display: flex;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(85, 85, 85);
+  cursor: none;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
+  display: flex;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(85, 85, 85);
 }
 
 .kite {
-    background-image: url(../img/kite_2.svg);
-    background-repeat: no-repeat;
-    width: 34px;
-    height: 34px;
-    opacity: 0;
+  background-image: url(../img/kite_2.svg);
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 34px;
+  opacity: 0;
 }
 
 .kitetail_letter {
-    color: #f0730d;
-    font: normal 13px Arial, Helvetica;
-    position: absolute;
-    top: -50px;
-    position: absolute;
-    /* mix-blend-mode:color-burn; */
-    animation: wave 2s ease-in-out infinite;
+  color: #f0730d;
+  font: normal 13px Arial, Helvetica;
+  position: absolute;
+  top: -50px;
+  position: absolute;
+  animation: wave 2s ease-in-out infinite;
 }
 
 @keyframes wave {
-    0% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(4px);
-    }
-
-    60% {
-        transform: translateY(6px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.button {
-    cursor: url(./img/none.png), auto;
-    position: absolute;
-    padding: 5px 50px;
-    text-align: center;
-    font-size: 1em;    
-    display: inline-block;
-    height: 60px;
-    color: #f0f0f0;    
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
-    border: none;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
-    transition: opacity 2s, transform 3s;
-}
-
-.button:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-
-div#snow1, div#snow2, div#meltsnow1, div#meltsnow2 {
-	overflow: hidden;
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	height: 80vH;
-	width: 100vW;
-	pointer-events: none;
-}
-
-@keyframes falling
-{
   0% {
-    top:-100px;
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(4px);
+  }
+
+  60% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+div#snow1,
+div#snow2,
+div#meltsnow1,
+div#meltsnow2 {
+  overflow: hidden;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 80vH;
+  width: 100vW;
+  pointer-events: none;
+}
+
+@keyframes falling {
+  0% {
+    top: -100px;
     opacity: 1;
   }
 
@@ -89,52 +68,53 @@ div#snow1, div#snow2, div#meltsnow1, div#meltsnow2 {
     opacity: 1;
   }
 
-  100%{
-    top:100%;
-    display:block;
+  100% {
+    top: 100%;
+    display: block;
     opacity: 0;
   }
 }
 
-.fall{
-	position:absolute;
-	top:-10px;
-	animation: falling 20s linear infinite;
-	pointer-events: all;
+.fall {
+  position: absolute;
+  top: -10px;
+  animation: falling 20s linear infinite;
+  pointer-events: all;
 }
 
-.fallfall{
-	position:absolute;
-	top:-10px;
-	animation: falling 20s linear infinite;
-	pointer-events: all;
+.fallfall {
+  position: absolute;
+  top: -10px;
+  animation: falling 20s linear infinite;
+  pointer-events: all;
   filter: blur(5px) hue-rotate(20deg);
 }
 
-input.sinus{
-	animation: sinus 20s ease-in-out infinite;
+input.sinus {
+  animation: sinus 20s ease-in-out infinite;
 }
-@keyframes sinus
-{
-  0%{
+
+@keyframes sinus {
+  0% {
     transform: translateX(-100px);
   }
-  50%{
+
+  50% {
     transform: translateX(100px);
   }
-  100%{
-	transform: translateX(-100px);
+
+  100% {
+    transform: translateX(-100px);
   }
 }
 
 .voices {
-	position:absolute;
-  top:15vh;
-  left:50vw;
-  transform: translate(-50%,0);
+  position: absolute;
+  top: 15vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
   line-height: 2em;
 }
-
 
 #flyback {
   background: url(../img/blowaway.png) no-repeat;
@@ -152,13 +132,63 @@ input.sinus{
   background: url(../img/exit.png) no-repeat;
   opacity: 0.6;
   cursor: url(../img/none.png), auto;
-} 
+}
+
+.notification {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("../img/bird.gif") no-repeat fixed center;
+  background-size: 100% 100%;
+  color: #000000;
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 ::selection {
-	background-color:transparent;
-	color:#2ee753;
+  background-color: transparent;
+  color: #2ee753;
 }
+
 ::-moz-selection {
-	background-color:transparent;
-	color:#2ee753;
+  background-color: transparent;
+  color: #2ee753;
+}
+
+#desktop-message {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #dddddd;
+  color: rgb(85, 85, 85);
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+  z-index: 9999;
+}
+
+#desktop-message p {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+}
+
+#desktop-message img {
+  position: absolute;
+  bottom: 10%;
+  width: 300px;
+  transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+  #desktop-message {
+    display: block;
+  }
 }

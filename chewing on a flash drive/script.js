@@ -1,5 +1,5 @@
 function pickup() {
-    alert("They picked up the drive.");
+    alert("The flash drive was picked up from the ground.");
     document.getElementById("ground").style.opacity = "0";
     document.getElementById("ground").style.cursor = "wait";
     document.getElementById("text").style.display = "block";

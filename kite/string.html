@@ -1,47 +1,56 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>a string is a link is a string</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>a string is a link is a string</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <link rel="stylesheet" href="./string/style.css">
-
-
 </head>
-<body onLoad="kitetail();">
+
+<body>
 
     <div class="search">
 
-    <div class="searchbar" id="search_btn">
-        <p>Well, any idea where my kite string could have gone?</p>
-        <img src="./string/crystal3.gif">
-    </div>
-    
+        <div class="searchbar" id="search_btn">
+            <p>Well, any idea where my kite string could have gone?</p>
+            <img src="./string/crystal3.gif">
+        </div>
+
         <div class="results">
-        <ul>
-            <li>There are some wires behind my screen</li>
-            <p>But none of them is attached to the device in my hand. They said this one is wireless...</p>
+            <ul>
+                <li>There are some wires behind my screen</li>
+                <p>But none of them is attached to the device in my hand. They said this one is wireless...</p>
 
-            <li>The internet? I don't know where this internet thing is</li>
-            <p>Maybe it is hidden behind the walls, or in the ceilings, or beneath the ground, or under the sea...</p>
+                <li>The internet? I don't know where this internet thing is</li>
+                <p>Maybe it is hidden behind the walls, or in the ceilings, or beneath the ground, or under the sea...
+                </p>
 
-            <li>Have you seen a subsea cable before</li>
-            <p>How can my little fingers manage this? It's thick like a trunk...</p>
+                <li>Have you seen a subsea cable before</li>
+                <p>How can my little fingers manage this? It's thick like a trunk...</p>
 
-            <li>Of course I also checked out the Web</li>
-            <p>I got lost there in a minute. There must be a billion, no, trillion strings...</p>
+                <li>Of course I also checked out the Web</li>
+                <p>I got lost there in a minute. There must be a billion, no, trillion strings...</p>
 
-            <li>Texts, scripts, URLs, hyperlinks and so on</li>
-            <p>They take me from one address to the other in a blink. How can I recognize my path, my string...</p>
-        </ul>    
+                <li>Texts, scripts, URLs, hyperlinks, etc.</li>
+                <p>They take me from one address to the other in a blink. How can I recognize my path, my string...</p>
+            </ul>
 
-        <button onclick="window.location.href = 'search.html';">More results</button>
+            <button onclick="window.location.href = 'search.html';">More results</button>
 
         </div>
-    
     </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./string/scripts.js"></script>
+
+    <div id="desktop-message">
+        <p>Please use a desktop or laptop to view this website for a better flying experience. <br><br>Good wind!</p>
+        <img src="./img/flyakite.png" alt="a human flying a kite">
+    </div>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="./string/scripts.js"></script>
 
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 body {
-    cursor: none;
+    cursor: url(./img/none.png), auto;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -7,7 +7,7 @@ body {
     display: flex;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(85, 85, 85);
+    color: rgb(85, 85, 85);
 }
 
 .kite {
@@ -16,6 +16,7 @@ body {
     width: 34px;
     height: 34px;
     opacity: 0;
+    z-index: 100;
 }
 
 .kitetail_letter {
@@ -23,7 +24,6 @@ body {
     font: normal 13px Arial, Helvetica;
     position: absolute;
     top: -50px;
-    position: absolute;
     animation: wave 2s ease-in-out infinite;
 }
 
@@ -45,21 +45,21 @@ body {
     }
 }
 
+
 .button {
     cursor: url(./img/none.png), auto;
     position: absolute;
     padding: 5px 50px;
     text-align: center;
-    font-size: 0.8em;    
+    font-size: 1em;
     display: inline-block;
-    height: 60px;
+    height: 50px;
     color: #ffffff;
-    opacity: 0.7;    
     background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
     border: none;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
     border-radius: 30px;
-    transition: opacity 2s, transform 3s
+    transition: opacity 2s, transform 3s;
 }
 
 .button:hover {
@@ -71,6 +71,7 @@ body {
 .cloud {
     width: 170px;
     opacity: 0.7;
+    z-index: 1;
 }
 
 .cloud_1 {
@@ -89,34 +90,160 @@ body {
     opacity: 0.2;
 }
 
+#readme {
+    animation: jitter 0.5s infinite alternate;
+    z-index: 3;
+}
+
+@keyframes jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-3px, -3px);
+    }
+
+    50% {
+        transform: translate(3px, 3px);
+    }
+
+    75% {
+        transform: translate(-3px, 3px);
+    }
+
+    100% {
+        transform: translate(3px, -3px);
+    }
+}
+
+.popup {
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* z-index: 1050; */
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear, z-index 0.15;
+    -o-transition: opacity 0.15s linear, z-index 0.15;
+    transition: opacity 0.15s linear, z-index 0.15;
+    z-index: -1;
+}
+
+.open {
+    z-index: 99999;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.inner {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    display: inline-block;
+    vertical-align: middle;
+    width: 700px;
+    margin: 30px auto;
+    max-width: 97%;
+    position: relative;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
+    border: 2px solid #ff7162;
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 20px rgba(255, 140, 73, 0.5);
+    box-shadow: 0 10px 20px rgba(255, 140, 73, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+    text-align: left;
+    line-height: 1.2em;
+    padding: 80px 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+#flower {
+    width: 470px;
+}
+
+.open .inner {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    position: relative;
+    z-index: 999;
+}
+
+.open .bg-overlay {
+    background: rgba(255, 131, 64, 0.3);
+    z-index: 99;
+}
+
+
+.bg-overlay {
+    background: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 0;
+    -webkit-transition: background 0.15s linear;
+    -o-transition: background 0.15s linear;
+    transition: background 0.15s linear;
+}
+
 .info {
     position: absolute;
     top: 20vh;
     left: 20vw;
-    display:flex;
+    display: flex;
     flex-direction: column;
-	align-items:flex-end;
-	justify-content:center;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .info img {
-    height:3em;
-	width:3em;
-    /* z-index: -1;	 */
+    height: 3em;
+    width: 3em;
     margin-right: 1em;
     margin-bottom: -0.3em;
     transform: rotate(10deg);
-    z-index: 10;
+    z-index: 2;
 }
 
 #info_btn {
     cursor: url(./img/none.png), auto;
     padding: 5px 50px;
     text-align: center;
-    font-size: 0.8em;
-    color: #ffffff;    
+    font-size: 1em;
+    color: #ffffff;
     display: inline-block;
-    height: 60px;
+    height: 50px;
     background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
     border: none;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
@@ -131,12 +258,61 @@ body {
     color: lightskyblue;
 }
 
+.notification {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url("./img/bird.gif") no-repeat fixed center;
+    background-size: 100% 100%;
+    color: #000000;
+    z-index: 9999;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 ::selection {
-	background-color:transparent;
-	color:#2ee753;
+    background-color: transparent;
+    color: #2ee753;
 }
+
 ::-moz-selection {
-	background-color:transparent;
-	color:#2ee753;
+    background-color: transparent;
+    color: #2ee753;
+}
+
+#desktop-message {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #dddddd;
+    color: rgb(85, 85, 85);
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+    z-index: 9999;
+}
+
+#desktop-message p {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#desktop-message img {
+    position: absolute;
+    bottom: 10%;
+    width: 300px;
+    transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+    #desktop-message {
+        display: block;
+    }
 }

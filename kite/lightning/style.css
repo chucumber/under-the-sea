@@ -7,7 +7,7 @@ body {
     display: flex;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(85, 85, 85);
+    color: #282828;
 }
 
 .kite {
@@ -47,7 +47,7 @@ body {
     }
 }
 
-#strike {
+/* #strike {
   position: absolute;
   left: 50vw;
   top:50vh;
@@ -59,23 +59,63 @@ body {
   border-radius: 5px;
   color:rgb(40, 40, 40);
   font-size: 1em;
-  cursor: url(../img/none.png), auto;
 }
 
 #strike:hover {
     background-color: rgb(139, 133, 133);
+} */
+
+.container {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 30px;
+}
+
+button {
+    background: #d70000;
+    border-radius: 50%;
+    box-shadow: 0 8px #960000;
+    color: #970000;
+    width: 120px;
+    height: 110px;
+    border: 2px solid #960000;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10% auto;
+    display: block;
+    position: relative;
+    cursor: url(../img/none.png), auto;
+}
+
+
+button:hover {
+    background: #e60e0e;
+    box-shadow: 0px 5px #960000;
+    top: 2px;
+}
+
+button:active {
+    background: #c80909;
+    box-shadow: 0px 0px #960000;
+    top: 5px;
+}
+
+#description {
+    font-style: italic;
 }
 
 #flyback {
     background: url(../img/blowaway.png) no-repeat;
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
     width: 60px;
     height: 35px;
     cursor: url(../img/none.png), auto;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: multiply;
+    mix-blend-mode: darken;
     display: none;
 }
 
@@ -83,13 +123,63 @@ body {
     background: url(../img/exit.png) no-repeat;
     opacity: 0.6;
     cursor: url(../img/none.png), auto;
-} 
+}
+
+.notification {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url("../img/bird.gif") no-repeat fixed center;
+    background-size: 100% 100%;
+    color: #000000;
+    z-index: 9999;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 ::selection {
-	background-color:transparent;
-	color:#2ee753;
+    background-color: transparent;
+    color: #2ee753;
 }
+
 ::-moz-selection {
-	background-color:transparent;
-	color:#2ee753;
+    background-color: transparent;
+    color: #2ee753;
+}
+
+#desktop-message {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #dddddd;
+    color: rgb(85, 85, 85);
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+    z-index: 9999;
+}
+
+#desktop-message p {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#desktop-message img {
+    position: absolute;
+    bottom: 10%;
+    width: 300px;
+    transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+    #desktop-message {
+        display: block;
+    }
 }

@@ -1,157 +1,103 @@
 body {
-    cursor: none;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
-    display: flex;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(85, 85, 85);
+  cursor: none;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(152, 216, 255) 100%);
+  display: flex;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(85, 85, 85);
 }
 
 .kite {
-    background-image: url(../img/kite_2.svg);
-    background-repeat: no-repeat;
-    width: 34px;
-    height: 34px;
-    opacity: 1;
+  background-image: url(../img/kite_2.svg);
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 34px;
+  opacity: 1;
 }
 
 .kitetail_letter {
-    color: #f0730d;
-    font: normal 13px Arial, Helvetica;
-    position: absolute;
-    top: -50px;
-    position: absolute;
-    animation: wave 2s ease-in-out infinite;
+  color: #f0730d;
+  font: normal 13px Arial, Helvetica;
+  position: absolute;
+  top: -50px;
+  position: absolute;
+  animation: wave 2s ease-in-out infinite;
 }
 
 @keyframes wave {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    40% {
-        transform: translateY(4px);
-    }
+  40% {
+    transform: translateY(4px);
+  }
 
-    60% {
-        transform: translateY(6px);
-    }
+  60% {
+    transform: translateY(6px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.button {
-    cursor: url(./img/none.png), auto;
-    position: absolute;
-    padding: 5px 50px;
-    text-align: center;
-    font-size: 1em;    
-    display: inline-block;
-    height: 60px;
-    color: #f0f0f0;    
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
-    border: none;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
-    transition: opacity 2s, transform 3s;
-}
-
-.button:hover {
-    transform: scale(1.2);
-    opacity: 1;
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .scrollbar {
   position: absolute;
-  top:10vh;
-  right:30vw;
+  top: 10vh;
+  right: 27vw;
   height: 60vh;
-  width: 15vw;  
-  background: #ffffff;
+  min-width: 20vw;
+  background: transparent;
   overflow-y: scroll;
   overflow-x: hidden;
-  margin: 25px;
-  scrollbar-color:#77b2ff #f6f6f6;
-  scrollbar-width: auto;
 }
 
-.scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+  box-shadow: 0px 0px 3px #d3d3d3 inset;
+}
+
+::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #dbeaf3 0%, #2c61ff 100%);
   border-radius: 5px;
 }
 
-.scrollbar::-webkit-scrollbar-track {
-  background-color: #f6f6f6;
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #dbeaf3 0%, #55aaff 100%);
+}
+
+/* firefox */
+@supports (-moz-appearance: none) {
+  .scrollbar {
+    scrollbar-color: #77b2ff #f6f6f6;
+    scrollbar-width: auto;
+  }
 }
 
 .overflow {
   min-height: 600vh;
 }
 
-.overflow p {
+table {
   position: relative;
+  margin-top: 38vh;
   font-size: 1em;
-  line-height: 38em;
+  right: 3px;
+  padding: 10px;
 }
 
-#just {
-  position: absolute;
-  top:20vh;
-  left: 1vw;
-}
-
-#when {
-  position: absolute;
-  left: 4vw;
-  top: 73vh;
-}
-
-#will {
-  position: absolute;
-  left: 7vw;
-  top: 130vh;
-}
-
-#this {
-  position: absolute;
-  left: 10vw;
-  top: 220vh;
-}
-
-#rain {
-  position: absolute;
-  left: 5vw;
-  top: 340vh;
-}
-
-#reach {
-  position: absolute;
-  left: 9vw;
-  top: 400vh;
-}
-
-#an {
-  position: absolute;
-  left: 7vw;
-  top: 490vh;
-}
-
-#end {
-  position: absolute;
-  left: 8vw;
-  top: 560vh;
+td {
+  height: 2em;
+  padding: 5px;
+  vertical-align: top;
 }
 
 .drops {
@@ -163,77 +109,125 @@ body {
 
 #drop1 {
   top: 10vh;
-  left:27vw;
+  left: 27vw;
 }
 
 #drop2 {
   top: 0vh;
-  left:35vw;
+  left: 35vw;
 }
 
 #drop3 {
   top: 6vh;
-  left:43vw;
+  left: 43vw;
 }
 
 #drop4 {
   top: 13vh;
-  left:47vw;
+  left: 47vw;
 }
 
 #drop5 {
   top: 15vh;
-  left:30vw;
+  left: 30vw;
 }
 
 #drop6 {
-  top: 8vh;
-  left:72vw;
+  top: 3vh;
+  left: 78vw;
 }
 
 #drop7 {
-  top: 19vh;
-  left:52vw;
+  top: 4vh;
+  left: 18vw;
 }
 
 #drop8 {
   top: 19vh;
-  left:39vw;
+  left: 39vw;
 }
 
 #drop9 {
   top: 19vh;
-  left:23vw;
+  left: 23vw;
 }
 
 #drop10 {
   top: 19vh;
-  left:45vw;
+  left: 45vw;
 }
 
 #flyback {
   background: url(../img/blowaway.png) no-repeat;
-  position: absolute;
-  top: 596vh;
-  left: 5em;
   width: 60px;
   height: 35px;
   cursor: url(../img/none.png), auto;
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
+  z-index: 10;
 }
 
 #flyback:hover {
   background: url(../img/exit.png) no-repeat;
   opacity: 0.6;
   cursor: url(../img/none.png), auto;
-} 
+}
+
+.notification {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("../img/bird.gif") no-repeat fixed center;
+  background-size: 100% 100%;
+  color: #000000;
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 ::selection {
-	background-color:transparent;
-	color:#2ee753;
+  background-color: transparent;
+  color: #2ee753;
 }
+
 ::-moz-selection {
-	background-color:transparent;
-	color:#2ee753;
+  background-color: transparent;
+  color: #2ee753;
+}
+
+#desktop-message {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #dddddd;
+  color: rgb(85, 85, 85);
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+  z-index: 9999;
+}
+
+#desktop-message p {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+}
+
+#desktop-message img {
+  position: absolute;
+  bottom: 10%;
+  width: 300px;
+  transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 1024px) {
+  #desktop-message {
+      display: block;
+  }
 }
