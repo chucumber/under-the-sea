@@ -153,6 +153,7 @@ function lightning() {
 }
 
 function closeall(windowToKeepOpen) {
+    window.location.href = 'index.html';
     // Iterate through the array of opened windows
     openedWindows.forEach(window => {
         // Check if the current window is not the one to keep open
@@ -160,6 +161,5 @@ function closeall(windowToKeepOpen) {
             window.close(); // Close the window
         }
     });
-    window.location.href = 'index.html';
 }
 
