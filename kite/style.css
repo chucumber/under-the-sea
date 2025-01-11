@@ -13,8 +13,8 @@ body {
 .kite {
     background-image: url(./img/kite_2.svg);
     background-repeat: no-repeat;
-    width: 34px;
-    height: 34px;
+    width: 2em;
+    height: 2em;
     opacity: 0;
     z-index: 100;
 }
@@ -49,16 +49,16 @@ body {
 .button {
     cursor: url(./img/none.png), auto;
     position: absolute;
-    padding: 5px 50px;
+    padding: 0.25em 3em;
     text-align: center;
     font-size: 1em;
     display: inline-block;
-    height: 50px;
+    height: 3em;
     color: #ffffff;
     background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(152, 216, 255) 100%);
     border: none;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
+    border-radius: 1.5em;
     transition: opacity 2s, transform 3s;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .cloud {
-    width: 170px;
+    width: 160px;
     opacity: 0.7;
     z-index: 1;
 }
@@ -81,12 +81,12 @@ body {
 
 
 .cloud_2 {
-    width: 223px;
+    width: 80;
     opacity: 0.3;
 }
 
 .cloud_3 {
-    width: 290px;
+    width: 180px;
     opacity: 0.2;
 }
 

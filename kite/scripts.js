@@ -81,7 +81,7 @@ $(document).ready(function () {
 
         var notification = $('<div>', {
             class: 'notification',
-            text: 'An arrow-like Sprite presents itself and a list of services. Hum...these options seem unnecessary for your flight...'
+            text: 'Hmm...these options seem unnecessary for your flight...'
         });
 
         $('body').append(notification);
@@ -95,13 +95,12 @@ $(document).ready(function () {
 function setRandomPositions() {
     var buttons = document.querySelectorAll('.button');
 
-    var windowWidth = window.innerWidth - 200;
-    var windowHeight = window.innerHeight - 200;
-    var gridCellWidth = 150; // Adjust the width of grid cells
+    var windowWidth = window.innerWidth - 50;
+    var windowHeight = window.innerHeight - 50;
+    var gridCellWidth = 100; // Adjust the width of grid cells
     var gridCellHeight = 40; // Adjust the height of grid cells
-    var margin = 100; // Margin from the edges of the window
+    var margin = 25; // Margin from the edges of the window
 
-    // Calculate the number of columns based on the available width after considering the margin and the width of the biggest button
     var columns = Math.floor((windowWidth - margin) / gridCellWidth);
     var rows = Math.floor(windowHeight / gridCellHeight);
 
